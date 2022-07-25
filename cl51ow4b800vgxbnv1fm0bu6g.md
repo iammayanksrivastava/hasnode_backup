@@ -46,5 +46,5 @@ Databricks AutoLoader incrementally and efficiently processes new data files as 
 
 # References
 
-[Official Document - Azure Databricks ](https://docs.microsoft.com/en-gb/azure/databricks/ingestion/auto-loader/)
-[TLC Trip Record Data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+*   [Official Document - Azure Databricks ](https://docs.microsoft.com/en-gb/azure/databricks/ingestion/auto-loader/)
+*   [TLC Trip Record Data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
