@@ -23,7 +23,7 @@ Typically, we all would like to have an Event driven orchestration and below is 
 
 To start with, lets talk about the design of a typical data platform. At the moment, my focus is on building the so called medallion architecture, using which the idea is to organize the data within a Lakehouse in bronze, silver and gold layers and the quality of data improves as it moves from one layer to another. Also the idea is to build a platform which can be used for both Batch and Streaming use case. In fact I should say that build a data platform which can support Event Driven Architecture.
 
-![Medallion](Medalion-Architecture.png)
+![Medallion](https://github.com/iammayanksrivastava/blog/blob/main/Medalion-Architecture.png)
 
 **Raw Zone**:
 This layer ingests the data from the source in the native format. There is no schema needed and we just dump all the data from the source into the Raw Layer either in form of csv files. 
