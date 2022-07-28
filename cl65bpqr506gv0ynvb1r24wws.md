@@ -62,8 +62,6 @@ I also wrote a small piece of code that identifies on the basis of the key colum
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029369530/qUMtADr-W.png?auto=compress)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
-
 The .foreachBatch option allows you to specify a function that is executed on the output data of every micro-batch of the streaming query. So basically you can define an action as a function and this option will execute that option before loading the data into your delta table.
 
 Auto Loader keeps track of discovered files in the checkpoint location using RocksDB to provide exactly-once ingestion guarantees. You can use the checkpointLocation option to specify the path.
@@ -80,7 +78,7 @@ Auto Loader keeps track of discovered files in the checkpoint location using Roc
 
 Once you are ready, you can execute the Autoloader function with the parameters defined at the runtime. Now in the below example, I used the .tirgger option set to true, so the job ran and loaded all the data in target and applied the SCD Type 1. 
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659030692251/QIa4AV1We.png?auto=compress)
 
 So any record which changed was updated in the target and all new records were added. The graph is pretty neat and works in real-time. So you can drop files in your source storage location and it will show up in the graph as Autoloader tries to process the files.
 
