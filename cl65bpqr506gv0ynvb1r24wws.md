@@ -76,7 +76,7 @@ Auto Loader keeps track of discovered files in the checkpoint location using Roc
 
     .option("checkpointLocation", "/tmp/sky/customers/_checkpoints")
 
-Once you are ready, you can execute the Autoloader function with the parameters defined at the runtime. Now in the below example, I used the .tirgger option set to true, so the job ran and loaded all the data in target and applied the SCD Type 1. 
+Once you are ready, you can execute the Autoloader function with the parameters defined at the runtime. Now in the below example, I used the .trigger option set to true, so the job ran and loaded all the data in target and applied the SCD Type 1. 
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659030692251/QIa4AV1We.png?auto=compress)
 
