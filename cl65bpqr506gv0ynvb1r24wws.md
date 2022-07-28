@@ -60,8 +60,6 @@ The option useNotifications allows you to choose whether you want to use the fil
 
 I also wrote a small piece of code that identifies on the basis of the key columns, if the data is already present in the table. If the keys along with the records are present in the target table and there is a change in the record, the code will update the existing record in the target delta lake table. If the record does not exist against the keys, it will insert the record as a new record into the target delta lake table. 
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029369530/qUMtADr-W.png?auto=compress)
-
 The .foreachBatch option allows you to specify a function that is executed on the output data of every micro-batch of the streaming query. So basically you can define an action as a function and this option will execute that option before loading the data into your delta table.
 
 Auto Loader keeps track of discovered files in the checkpoint location using RocksDB to provide exactly-once ingestion guarantees. You can use the checkpointLocation option to specify the path.
