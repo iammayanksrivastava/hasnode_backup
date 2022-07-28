@@ -44,7 +44,7 @@ Now, this is where I feel AutoLoader can come in handy to incrementally process 
 
 Below is the screenshot of the function which I created to process the data using Databricks Autoloader. At the end of this blog, you can also find the link for the notebook in my github repository.
 
-![Medalion-Architecture.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029470333/uSLjgOxqt.png?auto=compress)
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029470333/uSLjgOxqt.png?auto=compress)
 
 Auto Loader provides a Structured Streaming source called cloudFiles which when prefixed with options enables to perform multiple actions to support the requirements of an Event Driven architecture.
 
@@ -56,11 +56,11 @@ The option useNotifications allows you to choose whether you want to use the fil
 
     .option("cloudFiles.useNotifications", "true")
 
-![Medalion-Architecture.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029247186/EaeTVcU00.png?auto=compress)
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029247186/EaeTVcU00.png?auto=compress)
 
 I also wrote a small piece of code that identifies on the basis of the key columns, if the data is already present in the table. If the keys along with the records are present in the target table and there is a change in the record, the code will update the existing record in the target delta lake table. If the record does not exist against the keys, it will insert the record as a new record into the target delta lake table. 
 
-![Medalion-Architecture.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029369530/qUMtADr-W.png?auto=compress)
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029369530/qUMtADr-W.png?auto=compress)
 
 The .foreachBatch option allows you to specify a function that is executed on the output data of every micro-batch of the streaming query. So basically you can define an action as a function and this option will execute that option before loading the data into your delta table.
 
@@ -78,7 +78,7 @@ Auto Loader keeps track of discovered files in the checkpoint location using Roc
 
 Once you are ready, you can execute the Autoloader function with the parameters defined at the runtime. Now in the below example, I used the .tirgger option set to true, so the job ran and loaded all the data in target and applied the SCD Type 1. So any record which changed was updated in the target and all new records were added. The graph is pretty neat and works in real-time. So you can drop files in your source storage location and it will show up in the graph as Autoloader tries to process the files.
 
-![Running Autoloader.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
+![Running Autoloader](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
 
 If you click the tab of Raw Data, you will find the below output in JSON format. which has a mine of information that can really help you in building a Data Observability Dashboard. It provides you the operational metadata with details of when the batch was run, how many records were processed, and some other information. To be honest, I still need to figure out how can I put this information to use. 
 
