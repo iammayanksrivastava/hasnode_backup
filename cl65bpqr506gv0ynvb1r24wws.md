@@ -78,7 +78,7 @@ Auto Loader keeps track of discovered files in the checkpoint location using Roc
 
 Once you are ready, you can execute the Autoloader function with the parameters defined at the runtime. Now in the below example, I used the .tirgger option set to true, so the job ran and loaded all the data in target and applied the SCD Type 1. So any record which changed was updated in the target and all new records were added. The graph is pretty neat and works in real-time. So you can drop files in your source storage location and it will show up in the graph as Autoloader tries to process the files.
 
-![Running Autoloader](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659029336514/TS\_S8xLlp.png?auto=compress)
 
 If you click the tab of Raw Data, you will find the below output in JSON format. which has a mine of information that can really help you in building a Data Observability Dashboard. It provides you the operational metadata with details of when the batch was run, how many records were processed, and some other information. To be honest, I still need to figure out how can I put this information to use. 
 
